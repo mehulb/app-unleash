@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		28FE588C25B547D30026CA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE588B25B547D30026CA29 /* ViewController.swift */; };
 		28FE588E25B547D50026CA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28FE588D25B547D50026CA29 /* Assets.xcassets */; };
 		28FE589125B547D50026CA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FE588F25B547D50026CA29 /* Main.storyboard */; };
+		28FE589C25B549720026CA29 /* DDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE589B25B549720026CA29 /* DDView.swift */; };
+		28FE58A225B574FE0026CA29 /* XcodeProj in Frameworks */ = {isa = PBXBuildFile; productRef = 28FE58A125B574FE0026CA29 /* XcodeProj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,7 @@
 		28FE589025B547D50026CA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28FE589225B547D50026CA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28FE589325B547D50026CA29 /* AppUnleash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppUnleash.entitlements; sourceTree = "<group>"; };
+		28FE589B25B549720026CA29 /* DDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FE58A225B574FE0026CA29 /* XcodeProj in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 		28FE588825B547D30026CA29 /* AppUnleash */ = {
 			isa = PBXGroup;
 			children = (
+				28FE589B25B549720026CA29 /* DDView.swift */,
 				28FE588925B547D30026CA29 /* AppDelegate.swift */,
 				28FE588B25B547D30026CA29 /* ViewController.swift */,
 				28FE588D25B547D50026CA29 /* Assets.xcassets */,
@@ -79,6 +84,9 @@
 			dependencies = (
 			);
 			name = AppUnleash;
+			packageProductDependencies = (
+				28FE58A125B574FE0026CA29 /* XcodeProj */,
+			);
 			productName = AppUnleash;
 			productReference = 28FE588625B547D30026CA29 /* AppUnleash.app */;
 			productType = "com.apple.product-type.application";
@@ -106,6 +114,9 @@
 				Base,
 			);
 			mainGroup = 28FE587D25B547D30026CA29;
+			packageReferences = (
+				28FE58A025B574FE0026CA29 /* XCRemoteSwiftPackageReference "xcodeproj" */,
+			);
 			productRefGroup = 28FE588725B547D30026CA29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FE589C25B549720026CA29 /* DDView.swift in Sources */,
 				28FE588C25B547D30026CA29 /* ViewController.swift in Sources */,
 				28FE588A25B547D30026CA29 /* AppDelegate.swift in Sources */,
 			);
@@ -330,6 +342,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		28FE58A025B574FE0026CA29 /* XCRemoteSwiftPackageReference "xcodeproj" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tuist/xcodeproj.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28FE58A125B574FE0026CA29 /* XcodeProj */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28FE58A025B574FE0026CA29 /* XCRemoteSwiftPackageReference "xcodeproj" */;
+			productName = XcodeProj;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 28FE587E25B547D30026CA29 /* Project object */;
 }
