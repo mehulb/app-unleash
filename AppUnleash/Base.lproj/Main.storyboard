@@ -724,12 +724,12 @@
         <scene sceneID="fN1-wd-C9B">
             <objects>
                 <viewController id="NCL-mW-vOv" customClass="ViewController" customModule="AppUnleash" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="SdX-I5-6es" customClass="DDView" customModule="DLLGenerator" customModuleProvider="target">
+                    <view key="view" id="SdX-I5-6es" customClass="DDView" customModule="AppUnleash" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="650" height="620"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-ca-BKy">
-                                <rect key="frame" x="553" y="313" width="83" height="32"/>
+                                <rect key="frame" x="550" y="392" width="86" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zkb-4B-eaL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -752,18 +752,18 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaf-K6-h1t">
-                                <rect key="frame" x="10" y="10" width="630" height="290"/>
+                                <rect key="frame" x="10" y="10" width="630" height="369"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Oiv-It-7ot">
-                                    <rect key="frame" x="0.0" y="0.0" width="630" height="290"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="630" height="369"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView focusRingType="none" editable="NO" drawsBackground="NO" importsGraphics="NO" verticallyResizable="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" spellingCorrection="YES" id="U54-Dh-nSP">
-                                            <rect key="frame" x="0.0" y="0.0" width="630" height="290"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="630" height="369"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="630" height="290"/>
+                                            <size key="minSize" width="630" height="369"/>
                                             <size key="maxSize" width="793" height="10000000"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -774,12 +774,12 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="L2m-Ep-IIh">
-                                    <rect key="frame" x="614" y="0.0" width="16" height="270"/>
+                                    <rect key="frame" x="614" y="0.0" width="16" height="359"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="miY-Ap-aSg">
-                                <rect key="frame" x="20" y="330" width="16" height="16"/>
+                                <rect key="frame" x="20" y="409" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJ0-Ui-CuH">
@@ -859,7 +859,7 @@ DQ
                                 </segmentedCell>
                             </segmentedControl>
                             <box fixedFrame="YES" boxType="custom" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="4B8-0r-7dE">
-                                <rect key="frame" x="0.0" y="355" width="650" height="1"/>
+                                <rect key="frame" x="0.0" y="434" width="650" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="uK0-bi-gsO">
                                     <rect key="frame" x="1" y="1" width="648" height="0.0"/>
@@ -891,7 +891,7 @@ DQ
                                 </view>
                             </box>
                             <box fixedFrame="YES" boxType="custom" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="GEv-mj-SXL">
-                                <rect key="frame" x="0.0" y="310" width="650" height="1"/>
+                                <rect key="frame" x="0.0" y="389" width="650" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="QC8-8H-lmU">
                                     <rect key="frame" x="1" y="1" width="648" height="0.0"/>
@@ -899,11 +899,11 @@ DQ
                                 </view>
                             </box>
                             <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="sj3-aU-mS5">
-                                <rect key="frame" x="20" y="313" width="531" height="20"/>
+                                <rect key="frame" x="20" y="392" width="528" height="20"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="br5-dE-PJB">
-                                <rect key="frame" x="515" y="328" width="38" height="14"/>
+                                <rect key="frame" x="512" y="407" width="38" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" placeholderString="0%" id="nMk-Vj-nyH">
                                     <font key="font" metaFont="message" size="11"/>
@@ -912,7 +912,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-El-9nf">
-                                <rect key="frame" x="42" y="331" width="469" height="14"/>
+                                <rect key="frame" x="42" y="410" width="466" height="14"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="91O-YM-bkb">
                                     <font key="font" metaFont="message" size="11"/>
@@ -949,12 +949,20 @@ DQ
                                 </view>
                                 <color key="fillColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                             </box>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-j3-9Lb">
-                                <rect key="frame" x="18" y="414" width="614" height="16"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" placeholderString="Create DMG/PKG will come here" id="nx7-13-O7u">
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nng-wq-eYS">
+                                <rect key="frame" x="18" y="445" width="177" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Create a .dmg with name " bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1BF-8x-f7C">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </buttonCell>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sM-cR-BSj">
+                                <rect key="frame" x="197" y="443" width="433" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="appname-version-config" drawsBackground="YES" id="kJ0-pG-3hV">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -969,6 +977,8 @@ DQ
                         <outlet property="buildTextField" destination="PRv-KX-KAY" id="G3d-gg-fBw"/>
                         <outlet property="configSegmentedControl" destination="eDN-2K-dSi" id="CMb-B5-PnZ"/>
                         <outlet property="currentTaskLabel" destination="eCJ-El-9nf" id="osf-Hn-Iug"/>
+                        <outlet property="dmgCheckBox" destination="Nng-wq-eYS" id="WaB-eh-Gv6"/>
+                        <outlet property="dmgnameTextField" destination="3sM-cR-BSj" id="uvK-gi-ZA2"/>
                         <outlet property="outputTextView" destination="U54-Dh-nSP" id="yPa-Y3-aE8"/>
                         <outlet property="percentageLabel" destination="br5-dE-PJB" id="VKI-gF-MI5"/>
                         <outlet property="progressView" destination="sj3-aU-mS5" id="CXb-0Q-FXQ"/>

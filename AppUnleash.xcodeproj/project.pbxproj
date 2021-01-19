@@ -286,7 +286,7 @@
 				CODE_SIGN_ENTITLEMENTS = AppUnleash/AppUnleash.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 210118;
+				CURRENT_PROJECT_VERSION = 210119;
 				DEVELOPMENT_TEAM = 638CAR2KDN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = AppUnleash/Info.plist;
@@ -294,6 +294,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = in.mehulb.AppUnleash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -308,7 +309,7 @@
 				CODE_SIGN_ENTITLEMENTS = AppUnleash/AppUnleash.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 210118;
+				CURRENT_PROJECT_VERSION = 210119;
 				DEVELOPMENT_TEAM = 638CAR2KDN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = AppUnleash/Info.plist;
@@ -316,6 +317,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = in.mehulb.AppUnleash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

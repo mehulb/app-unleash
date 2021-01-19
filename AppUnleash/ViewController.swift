@@ -14,16 +14,17 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     @IBOutlet private var versionTextField          : NSTextField?
     @IBOutlet private var buildTextField            : NSTextField?
-    
-    @IBOutlet private var outputTextView            : NSTextView?
-    
     @IBOutlet private var configSegmentedControl    : NSSegmentedControl?
     
-    @IBOutlet private var activityIndicator         : NSProgressIndicator?
+    @IBOutlet private var dmgCheckBox               : NSButton?
+    @IBOutlet private var dmgnameTextField          : NSTextField?
     
+    @IBOutlet private var activityIndicator         : NSProgressIndicator?
     @IBOutlet private var percentageLabel           : NSTextField?
     @IBOutlet private var currentTaskLabel          : NSTextField?
     @IBOutlet private var progressView              : NSProgressIndicator?
+    
+    @IBOutlet private var outputTextView            : NSTextView?
     
     private var xcodePath = ""
     private var infoPlistPath = ""
@@ -73,7 +74,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         
         if !IsVersionValid(versionString) {
             output("Invalid Version!", 3)
-            output("Example version: 1.4.0", 2)
+            output("Example version: 1.4.0 or 1.2", 2)
             return
         }
         if !IsBuildValid(buildString) {
@@ -92,8 +93,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             //            _ = self.buildXcodeProject()
             if self.changeXcodeProjectVersion() {
                 if self.buildXcodeProject() {
-                    // :)
-                    self.complete()
+                    if self.createDMG() {
+                        // :)
+                        self.complete()
+                    }
                 }
             }
             DispatchQueue.main.async {
@@ -116,7 +119,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
 extension ViewController {
     private func changeXcodeProjectVersion() -> Bool {
         output("Update \(projectName) version ...", 1)
-        updateProgress(progress: 80, message: "Updating \(projectName) Version...")
+        updateProgress(progress: 30, message: "Updating \(projectName) Version...")
         
         if !xcodePath.isEmpty {
             if FileManager.default.fileExists(atPath: infoPlistPath) {
@@ -145,7 +148,7 @@ extension ViewController {
     }
     private func buildXcodeProject() -> Bool {
         output("Start building \(projectName) ...", 1)
-        updateProgress(progress: 10, message: "Buiding \(projectName)...")
+        updateProgress(progress: 30, message: "Buiding \(projectName)...")
         
         let args = [
             "-project",
@@ -162,18 +165,45 @@ extension ViewController {
         output("... \(projectName) build complete", 1)
         return true
     }
+    private func createDMG() -> Bool {
+        output("Start creating \(projectName).dmg ...", 1)
+        updateProgress(progress: 40, message: "Creating \(projectName).dmg ...")
+        print("\(buildPath)")
+        let args = [
+            "create",
+            "-volname",
+            "\(projectName)",
+            "-srcfolder",
+            "\(buildPath)/\(projectName).app",
+            "-ov",
+            "-format",
+            "UDZO",
+            "\(projectName)-\(versionString).\(buildString)-\(configString).dmg"
+        ]
+        output(runCommand(launchPath: "/usr/bin/hdiutil", currentDirectoryPath: buildPath, arguments: args), 2)
+        output("... \(projectName).dmg created", 1)
+        
+        return true
+    }
     private func complete() {
         updateProgress(progress: 100, message: "Complete!")
+        openBuildDirectory()
+    }
+    private func openBuildDirectory() {
+        NSWorkspace.shared.openFile(buildPath)
     }
 }
 
 //MARK:- Helper Methods
 extension ViewController {
-    private func runCommand(launchPath: String, arguments: [String]) -> String {
+    private func runCommand(launchPath: String, currentDirectoryPath: String? = nil, arguments: [String]) -> String {
         let task = Process()
         let pipe = Pipe()
         
         task.launchPath = launchPath
+        if let currPath = currentDirectoryPath {
+            task.currentDirectoryPath = currPath
+        }
         task.arguments = arguments
         task.standardOutput = pipe
         task.standardError = pipe
@@ -214,7 +244,7 @@ extension ViewController {
             case 1:
                 attributes = [.font: NSFont(name: "Courier", size: 14)!, .foregroundColor: NSColor.labelColor]
             case 2:
-                attributes = [.font: NSFont(name: "Courier New", size: 14)!, .foregroundColor: NSColor.tertiaryLabelColor]
+                attributes = [.font: NSFont(name: "Courier", size: 14)!, .foregroundColor: NSColor.tertiaryLabelColor]
             case 3:
                 attributes = [.font: NSFont(name: "Courier", size: 14)!, .foregroundColor: NSColor.red]
             default:
@@ -229,18 +259,18 @@ extension ViewController {
         }
     }
     private func IsVersionValid(_ string: String) -> Bool {
-        if string.isEmpty {
-            return false
-        }
         let vComp = string.components(separatedBy: ".")
-        if vComp.count != 3 {
-            return false
+        if vComp.count == 3 {
+            if Int(vComp[0]) != nil && Int(vComp[1]) != nil && Int(vComp[2]) != nil {
+                return true
+            }
         }
-        if Int(vComp[0]) == nil || Int(vComp[1]) == nil || Int(vComp[2]) == nil {
-            return false
+        else if vComp.count == 2 {
+            if Int(vComp[0]) != nil && Int(vComp[1]) != nil {
+                return true
+            }
         }
-        
-        return true
+        return false
     }
     private func IsBuildValid(_ string: String) -> Bool {
         if string.isEmpty {
