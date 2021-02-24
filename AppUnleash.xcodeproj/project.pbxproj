@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289685B925BE147300A23188 /* XcodeProj in Frameworks */ = {isa = PBXBuildFile; productRef = 289685B825BE147300A23188 /* XcodeProj */; };
 		28FE588A25B547D30026CA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE588925B547D30026CA29 /* AppDelegate.swift */; };
 		28FE588C25B547D30026CA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE588B25B547D30026CA29 /* ViewController.swift */; };
 		28FE588E25B547D50026CA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28FE588D25B547D50026CA29 /* Assets.xcassets */; };
 		28FE589125B547D50026CA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FE588F25B547D50026CA29 /* Main.storyboard */; };
 		28FE589C25B549720026CA29 /* DDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE589B25B549720026CA29 /* DDView.swift */; };
-		28FE58A225B574FE0026CA29 /* XcodeProj in Frameworks */ = {isa = PBXBuildFile; productRef = 28FE58A125B574FE0026CA29 /* XcodeProj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FE58A225B574FE0026CA29 /* XcodeProj in Frameworks */,
+				289685B925BE147300A23188 /* XcodeProj in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +85,7 @@
 			);
 			name = AppUnleash;
 			packageProductDependencies = (
-				28FE58A125B574FE0026CA29 /* XcodeProj */,
+				289685B825BE147300A23188 /* XcodeProj */,
 			);
 			productName = AppUnleash;
 			productReference = 28FE588625B547D30026CA29 /* AppUnleash.app */;
@@ -115,7 +115,7 @@
 			);
 			mainGroup = 28FE587D25B547D30026CA29;
 			packageReferences = (
-				28FE58A025B574FE0026CA29 /* XCRemoteSwiftPackageReference "xcodeproj" */,
+				289685B725BE147300A23188 /* XCRemoteSwiftPackageReference "xcodeproj" */,
 			);
 			productRefGroup = 28FE588725B547D30026CA29 /* Products */;
 			projectDirPath = "";
@@ -289,6 +289,10 @@
 				CURRENT_PROJECT_VERSION = 210119;
 				DEVELOPMENT_TEAM = 638CAR2KDN;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppUnleash/XcodeProj",
+				);
 				INFOPLIST_FILE = AppUnleash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,6 +316,10 @@
 				CURRENT_PROJECT_VERSION = 210119;
 				DEVELOPMENT_TEAM = 638CAR2KDN;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppUnleash/XcodeProj",
+				);
 				INFOPLIST_FILE = AppUnleash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,7 +356,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		28FE58A025B574FE0026CA29 /* XCRemoteSwiftPackageReference "xcodeproj" */ = {
+		289685B725BE147300A23188 /* XCRemoteSwiftPackageReference "xcodeproj" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tuist/xcodeproj.git";
 			requirement = {
@@ -359,9 +367,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		28FE58A125B574FE0026CA29 /* XcodeProj */ = {
+		289685B825BE147300A23188 /* XcodeProj */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 28FE58A025B574FE0026CA29 /* XCRemoteSwiftPackageReference "xcodeproj" */;
+			package = 289685B725BE147300A23188 /* XCRemoteSwiftPackageReference "xcodeproj" */;
 			productName = XcodeProj;
 		};
 /* End XCSwiftPackageProductDependency section */

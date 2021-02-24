@@ -7,10 +7,36 @@
 
 import Cocoa
 import XcodeProj
+import PathKit
+
+extension String {
+    var str: NSString {
+        return self as NSString
+    }
+    
+    var pathExtension: String {
+        return str.pathExtension
+    }
+    
+    var lastPathComponent: String {
+        return str.lastPathComponent
+    }
+    
+    var deletingLastPathComponent: String {
+        return str.deletingLastPathComponent
+    }
+    
+    var deletingPathExtension: String {
+        return str.deletingPathExtension
+    }
+}
+
 
 class ViewController: NSViewController, NSTextFieldDelegate {
     
     @IBOutlet private var xcodeProjectPathTextField : NSTextField?
+    @IBOutlet private var workspaceProjectsPopUpButton: NSPopUpButton?
+    @IBOutlet private var projectTargetsPopUpButton: NSPopUpButton?
     
     @IBOutlet private var versionTextField          : NSTextField?
     @IBOutlet private var buildTextField            : NSTextField?
@@ -26,6 +52,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     @IBOutlet private var outputTextView            : NSTextView?
     
+    private var xcpath: Path?
+    private var workspace: XCWorkspace?
+    private var project: XcodeProj?
+    
     private var xcodePath = ""
     private var infoPlistPath = ""
     private var buildPath = ""
@@ -35,18 +65,66 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     private var buildString = ""
     private var configString = "Release"
     
+    private let kExtnProject = "xcproject"
+    private let kExtnWorkspace = "xcworkspace"
+    
+    private var isWorkspace = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        (self.view as! DDView).validExtensions = ["xcodeproj"]
+        (self.view as! DDView).validExtensions = [kExtnProject, kExtnWorkspace]
         (self.view as! DDView).didDropFile { (filePath) in
-            print("\(filePath)")
+            print("Dropped path: \(filePath)")
+            self.isWorkspace = (filePath.pathExtension == self.kExtnWorkspace)
             self.xcodeProjectPathTextField?.stringValue = filePath
             self.populateVersionAndBuild()
+            self.fetchProjectDetails(filePath)
         }
         
         xcodeProjectPathTextField?.delegate = self
         outputTextView?.font = NSFont(name: "Andale Mono", size: 14)
+        
+        output(runCommand(launchPath: "/bin/launchctl", arguments: ["list"]), 1)
+    }
+    
+    private func fetchProjectDetails(_ path: String) {
+        workspaceProjectsPopUpButton?.isHidden = false
+        workspaceProjectsPopUpButton?.addItem(withTitle: "Select Project")
+        workspaceProjectsPopUpButton?.menu?.addItem(NSMenuItem.separator())
+        do {
+            xcpath = Path(path)
+            workspace = try XCWorkspace(path: xcpath!)
+            workspace!.data.children.forEach { element in
+                print(">> \(element.location)")
+                workspaceProjectsPopUpButton?.addItem(withTitle: element.location.path)
+            }
+        } catch {
+            print("\(error)")
+        }
+    }
+    @IBAction func workspaceProjectsPopUpButton_SelectionChanged(_ button: NSPopUpButton) {
+        print("\(button.titleOfSelectedItem ?? "--")")
+        
+        projectTargetsPopUpButton?.isHidden = false
+        projectTargetsPopUpButton?.addItem(withTitle: "Select Target")
+        projectTargetsPopUpButton?.menu?.addItem(NSMenuItem.separator())
+        do {
+            let projPath = xcpath!.url.deletingLastPathComponent().appendingPathComponent(workspace!.data.children.first!.location.path).path
+            let xcodeproj = try XcodeProj(path: Path(projPath))
+            let pbxproj = xcodeproj.pbxproj
+            pbxproj.nativeTargets.forEach { target in
+                print("\(target)")
+                projectTargetsPopUpButton?.addItem(withTitle: target.name)
+            }
+        } catch {
+            print("\(error)")
+        }
+        
+        
+    }
+    @IBAction func projectTargetsPopUpButton_SelectionChanged(_ button: NSPopUpButton) {
+        print("\(button.titleOfSelectedItem ?? "--")")
     }
     
     @IBAction func xcodeButton_Clicked(_ button: NSButton) {
@@ -151,7 +229,7 @@ extension ViewController {
         updateProgress(progress: 30, message: "Buiding \(projectName)...")
         
         let args = [
-            "-project",
+            isWorkspace ? "-workspace" : "-project",
             xcodePath,
             "-scheme",
             "\(projectName)",
@@ -305,27 +383,4 @@ extension ViewController {
         }
     }
 }
-
-extension String {
-    var str: NSString {
-        return self as NSString
-    }
-    
-    var pathExtension: String {
-        return str.pathExtension
-    }
-    
-    var lastPathComponent: String {
-        return str.lastPathComponent
-    }
-    
-    var deletingLastPathComponent: String {
-        return str.deletingLastPathComponent
-    }
-    
-    var deletingPathExtension: String {
-        return str.deletingPathExtension
-    }
-}
-
 

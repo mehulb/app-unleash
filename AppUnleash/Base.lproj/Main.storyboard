@@ -729,7 +729,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-ca-BKy">
-                                <rect key="frame" x="550" y="392" width="86" height="32"/>
+                                <rect key="frame" x="550" y="350" width="86" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zkb-4B-eaL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -743,7 +743,7 @@ DQ
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Y6-wR-Xd8">
-                                <rect key="frame" x="62" y="494" width="75" height="21"/>
+                                <rect key="frame" x="62" y="452" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="0.0.0" drawsBackground="YES" id="vBL-Cm-2K9">
                                     <font key="font" size="13" name="Courier"/>
@@ -752,18 +752,18 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaf-K6-h1t">
-                                <rect key="frame" x="10" y="10" width="630" height="369"/>
+                                <rect key="frame" x="10" y="10" width="630" height="329"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Oiv-It-7ot">
-                                    <rect key="frame" x="0.0" y="0.0" width="630" height="369"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="630" height="329"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView focusRingType="none" editable="NO" drawsBackground="NO" importsGraphics="NO" verticallyResizable="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" spellingCorrection="YES" id="U54-Dh-nSP">
-                                            <rect key="frame" x="0.0" y="0.0" width="630" height="369"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="630" height="329"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="630" height="369"/>
+                                            <size key="minSize" width="630" height="329"/>
                                             <size key="maxSize" width="793" height="10000000"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -774,12 +774,12 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="L2m-Ep-IIh">
-                                    <rect key="frame" x="614" y="0.0" width="16" height="359"/>
+                                    <rect key="frame" x="614" y="0.0" width="16" height="329"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="miY-Ap-aSg">
-                                <rect key="frame" x="20" y="409" width="16" height="16"/>
+                                <rect key="frame" x="20" y="367" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJ0-Ui-CuH">
@@ -821,7 +821,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Na0-nk-JSD">
-                                <rect key="frame" x="18" y="497" width="42" height="15"/>
+                                <rect key="frame" x="18" y="455" width="42" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Version" id="6hy-v1-LCf">
                                     <font key="font" size="12" name="HelveticaNeue-Light"/>
@@ -830,7 +830,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PRv-KX-KAY">
-                                <rect key="frame" x="179" y="494" width="75" height="21"/>
+                                <rect key="frame" x="179" y="452" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="000000" drawsBackground="YES" id="vwB-yr-SOj">
                                     <font key="font" size="13" name="Courier"/>
@@ -839,7 +839,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYE-NG-mnf">
-                                <rect key="frame" x="147" y="497" width="30" height="15"/>
+                                <rect key="frame" x="147" y="455" width="30" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Build" id="Gcb-iG-6NY">
                                     <font key="font" size="12" name="HelveticaNeue-Light"/>
@@ -848,7 +848,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDN-2K-dSi">
-                                <rect key="frame" x="264" y="492" width="135" height="24"/>
+                                <rect key="frame" x="264" y="450" width="135" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="3w7-Kv-Zzl">
                                     <font key="font" metaFont="system"/>
@@ -859,7 +859,7 @@ DQ
                                 </segmentedCell>
                             </segmentedControl>
                             <box fixedFrame="YES" boxType="custom" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="4B8-0r-7dE">
-                                <rect key="frame" x="0.0" y="434" width="650" height="1"/>
+                                <rect key="frame" x="0.0" y="392" width="650" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="uK0-bi-gsO">
                                     <rect key="frame" x="1" y="1" width="648" height="0.0"/>
@@ -867,7 +867,7 @@ DQ
                                 </view>
                             </box>
                             <box fixedFrame="YES" boxType="custom" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="fac-Pb-21K">
-                                <rect key="frame" x="0.0" y="481" width="650" height="1"/>
+                                <rect key="frame" x="0.0" y="439" width="650" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="1HV-XT-PHg">
                                     <rect key="frame" x="1" y="1" width="648" height="0.0"/>
@@ -875,7 +875,7 @@ DQ
                                 </view>
                             </box>
                             <box fixedFrame="YES" boxType="custom" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-tZ-IEN">
-                                <rect key="frame" x="0.0" y="527" width="650" height="1"/>
+                                <rect key="frame" x="0.0" y="485" width="650" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="StT-2G-jVb">
                                     <rect key="frame" x="1" y="1" width="648" height="0.0"/>
@@ -891,7 +891,7 @@ DQ
                                 </view>
                             </box>
                             <box fixedFrame="YES" boxType="custom" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="GEv-mj-SXL">
-                                <rect key="frame" x="0.0" y="389" width="650" height="1"/>
+                                <rect key="frame" x="0.0" y="347" width="650" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="QC8-8H-lmU">
                                     <rect key="frame" x="1" y="1" width="648" height="0.0"/>
@@ -899,11 +899,11 @@ DQ
                                 </view>
                             </box>
                             <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="sj3-aU-mS5">
-                                <rect key="frame" x="20" y="392" width="528" height="20"/>
+                                <rect key="frame" x="20" y="350" width="528" height="20"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="br5-dE-PJB">
-                                <rect key="frame" x="512" y="407" width="38" height="14"/>
+                                <rect key="frame" x="512" y="365" width="38" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" placeholderString="0%" id="nMk-Vj-nyH">
                                     <font key="font" metaFont="message" size="11"/>
@@ -912,7 +912,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-El-9nf">
-                                <rect key="frame" x="42" y="410" width="466" height="14"/>
+                                <rect key="frame" x="42" y="368" width="466" height="14"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="91O-YM-bkb">
                                     <font key="font" metaFont="message" size="11"/>
@@ -921,7 +921,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <box hidden="YES" fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="w30-XX-fKk">
-                                <rect key="frame" x="473" y="506" width="177" height="114"/>
+                                <rect key="frame" x="473" y="464" width="177" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="6TL-Dm-tZW">
                                     <rect key="frame" x="0.0" y="0.0" width="177" height="114"/>
@@ -950,7 +950,7 @@ DQ
                                 <color key="fillColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nng-wq-eYS">
-                                <rect key="frame" x="18" y="445" width="177" height="18"/>
+                                <rect key="frame" x="18" y="403" width="177" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Create a .dmg with name " bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1BF-8x-f7C">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -958,7 +958,7 @@ DQ
                                 </buttonCell>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sM-cR-BSj">
-                                <rect key="frame" x="197" y="443" width="433" height="21"/>
+                                <rect key="frame" x="197" y="401" width="433" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="appname-version-config" drawsBackground="YES" id="kJ0-pG-3hV">
                                     <font key="font" metaFont="system"/>
@@ -966,6 +966,30 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiF-ab-YdA">
+                                <rect key="frame" x="19" y="507" width="143" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="kmd-rq-ohk">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="WhX-hK-Qen"/>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="workspaceProjectsPopUpButton_SelectionChanged:" target="NCL-mW-vOv" id="xGO-Zh-2a8"/>
+                                </connections>
+                            </popUpButton>
+                            <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InJ-uv-ZtO">
+                                <rect key="frame" x="164" y="507" width="144" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="YfF-cf-1hh">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="kOD-Em-YdW"/>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="projectTargetsPopUpButton_SelectionChanged:" target="NCL-mW-vOv" id="vGd-I9-Uv0"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                         <connections>
                             <outlet property="messageBox" destination="w30-XX-fKk" id="I5m-KT-4uK"/>
@@ -982,7 +1006,9 @@ DQ
                         <outlet property="outputTextView" destination="U54-Dh-nSP" id="yPa-Y3-aE8"/>
                         <outlet property="percentageLabel" destination="br5-dE-PJB" id="VKI-gF-MI5"/>
                         <outlet property="progressView" destination="sj3-aU-mS5" id="CXb-0Q-FXQ"/>
+                        <outlet property="projectTargetsPopUpButton" destination="InJ-uv-ZtO" id="9BW-0G-tif"/>
                         <outlet property="versionTextField" destination="2Y6-wR-Xd8" id="mDZ-cD-TdG"/>
+                        <outlet property="workspaceProjectsPopUpButton" destination="SiF-ab-YdA" id="6QC-BS-zxw"/>
                         <outlet property="xcodeProjectPathTextField" destination="A5e-Ul-HZU" id="7Zk-xo-CqI"/>
                     </connections>
                 </viewController>
